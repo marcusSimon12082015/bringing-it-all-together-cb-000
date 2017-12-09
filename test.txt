@@ -1,0 +1,27 @@
+
+Dog
+  attributes
+[32m    has a name and a breed[0m
+[32m    has an id that defaults to `nil` on initialization[0m
+[32m    accepts key value pairs as arguments to initialize[0m
+  ::create_table
+[32m    creates the dogs table in the database[0m
+  ::drop_table
+[32m    drops the dogs table from the database[0m
+  #save
+[31m    returns an instance of the dog class (FAILED - 1)[0m
+
+Failures:
+
+  1) Dog #save returns an instance of the dog class
+     [31mFailure/Error: [0mexpect(dog).to be_instance_of([1;34;4mDog[0m)[0m
+     [31m  expected 1 to be an instance of Dog[0m
+     [36m# ./spec/dog_spec.rb:60:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.01825 seconds (files took 0.33623 seconds to load)
+[31m6 examples, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/dog_spec.rb:57[0m [36m# Dog #save returns an instance of the dog class[0m
+
