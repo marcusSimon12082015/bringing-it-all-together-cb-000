@@ -33,7 +33,6 @@ class Dog
       dog.send("#{key}=",value)
     end
     dog.save
-    #binding.pry
     dog
   end
 end
