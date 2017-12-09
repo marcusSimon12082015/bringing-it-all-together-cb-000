@@ -34,8 +34,8 @@ class Dog
     hash.each do |key,value|
       dog.send("#{key}=",value)
     end
-    binding.pry
     dog.save
+    binding.pry
     dog
   end
 end
