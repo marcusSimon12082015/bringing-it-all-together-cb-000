@@ -28,9 +28,7 @@ class Dog
     self
   end
   def self.create(hash)
-    name = "name"
-    breed = "breed"
-    dog = Dog.new(name:name,breed:breed)
+    dog = Dog.new(name:nil,breed:nil)
     hash.each do |key,value|
       dog.send("#{key}=",value)
     end
