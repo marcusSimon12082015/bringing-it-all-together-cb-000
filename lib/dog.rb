@@ -26,6 +26,11 @@ class Dog
     self
   end
   def self.create(hash)
-
+    dog = Dog.new(nil,nil,nil)
+    hash.each do |key,value|
+      dog.send("#{key}=",value)
+    end
+    dog.save 
+    dog 
   end
 end
