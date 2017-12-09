@@ -60,4 +60,10 @@ class Dog
     dog = Dog.new(name:result[0][1],breed:result[0][2],id:result[0][0])
     dog
   end
+  def update
+    sql = <<-SQL 
+      UPDATE dogs SET name = ?,breed = ? WHERE id = ?
+    SQL
+    DB[:conn].execute(sql,self.name,self.breed) 
+  end
 end
