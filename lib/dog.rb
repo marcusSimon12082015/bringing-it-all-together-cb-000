@@ -6,6 +6,7 @@ class Dog
     @breed = breed
     @id = id
   end
+
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS dogs(id INTEGER PRIMARY KEY,name INTEGER,breed TEXT)
@@ -26,12 +27,9 @@ class Dog
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
     self
   end
-  def self.create(hash)
-    dog = Dog.new
-    hash.each do |key,value|
-      dog.send("#{key}=",value)
-    end
-    binding.pry
+  def self.create(name:,breed:)
+    dog = Dog.new(name,breed)
     dog.save
+    dog
   end
 end
