@@ -30,7 +30,7 @@ class Dog
   def self.create(hash)
     name = "name"
     breed = "breed"
-    dog = Dog.new
+    dog = Dog.new(name:name,breed:breed)
     binding.pry
     hash.each do |key,value|
       dog.send("#{key}=",value)
