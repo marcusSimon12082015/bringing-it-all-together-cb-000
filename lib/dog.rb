@@ -19,13 +19,13 @@ class Dog
   end
   def save
     sql = <<-SQL
-      INSERt INTO dogs(name,breed) VALUES(?,?)
+      INSERT INTO dogs(name,breed) VALUES(?,?)
     SQL
     DB[:conn].execute(sql,self.name,self.breed)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
     self
   end
   def self.create(hash)
-    
-  end 
+
+  end
 end
