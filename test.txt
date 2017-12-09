@@ -1,0 +1,27 @@
+
+Dog
+  attributes
+[32m    has a name and a breed[0m
+[32m    has an id that defaults to `nil` on initialization[0m
+[32m    accepts key value pairs as arguments to initialize[0m
+  ::create_table
+[32m    creates the dogs table in the database[0m
+  ::drop_table
+[31m    drops the dogs table from the database (FAILED - 1)[0m
+
+Failures:
+
+  1) Dog ::drop_table drops the dogs table from the database
+     [31mFailure/Error: [0m[1;34;4mDog[0m.drop_table[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `drop_table' for Dog:Class[0m
+     [36m# ./spec/dog_spec.rb:50:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.00555 seconds (files took 0.43322 seconds to load)
+[31m5 examples, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/dog_spec.rb:49[0m [36m# Dog ::drop_table drops the dogs table from the database[0m
+
