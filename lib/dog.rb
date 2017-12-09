@@ -28,8 +28,11 @@ class Dog
     self
   end
   def self.create(hash)
+    dog = Dog.new
     binding.pry
-    dog = Dog.new(name,breed)
+    hash.each do |key,value|
+      dog.send("#{key}=",value)
+    end
     dog.save
     dog
   end
