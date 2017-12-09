@@ -30,7 +30,7 @@ class Dog
     hash.each do |key,value|
       dog.send("#{key}=",value)
     end
-    dog.save 
-    dog 
+    dog.save
+    dog
   end
 end
