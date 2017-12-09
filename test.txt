@@ -1,0 +1,33 @@
+
+Dog
+  attributes
+[32m    has a name and a breed[0m
+[32m    has an id that defaults to `nil` on initialization[0m
+[32m    accepts key value pairs as arguments to initialize[0m
+  ::create_table
+[32m    creates the dogs table in the database[0m
+  ::drop_table
+[32m    drops the dogs table from the database[0m
+  #save
+[31m    returns an instance of the dog class (FAILED - 1)[0m
+
+Failures:
+
+  1) Dog #save returns an instance of the dog class
+     [31mFailure/Error:[0m
+     [31m      [0msql [31m[1;31m<<-SQL[0m[31m[0m[31m[0m
+     [31m        [0mINSER INTO dogs(name,breed) VALUES(?,?)[1;31m[0m[0m
+     [31m  [0m[1;31m    SQL[0m[31m[0m[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `sql' for #<Dog:0x00000001ad6a28 @name="Teddy", @breed="cockapoo">[0m
+     [36m# ./lib/dog.rb:21:in `save'[0m
+     [36m# ./spec/dog_spec.rb:58:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.00549 seconds (files took 0.34575 seconds to load)
+[31m6 examples, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/dog_spec.rb:57[0m [36m# Dog #save returns an instance of the dog class[0m
+
