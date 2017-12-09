@@ -31,10 +31,10 @@ class Dog
     name = "name"
     breed = "breed"
     dog = Dog.new(name:name,breed:breed)
-    binding.pry
     hash.each do |key,value|
       dog.send("#{key}=",value)
     end
+    binding.pry
     dog.save
     dog
   end
